@@ -1,0 +1,631 @@
+{
+	"info": {
+		"_postman_id": "2e4e451e-f12b-4625-a873-db2a945b8ea4",
+		"name": "Meraki List Devices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List The Devices In A Network",
+			"protocolProfileBehavior": {
+				"followAuthorizationHeader": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": ""
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/networks/:networkId/devices",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"networks",
+						":networkId",
+						"devices"
+					],
+					"variable": [
+						{
+							"key": "networkId",
+							"value": "{{networkId}}",
+							"description": "(Required) "
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful operation",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/networks/:networkId/devices",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"networks",
+								":networkId",
+								"devices"
+							],
+							"variable": [
+								{
+									"key": "networkId"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n {\n  \"name\": \"My AP\",\n  \"lat\": 37.4180951010362,\n  \"lng\": -122.098531723022,\n  \"serial\": \"Q234-ABCD-5678\",\n  \"mac\": \"00:11:22:33:44:55\",\n  \"model\": \"MR34\",\n  \"address\": \"1600 Pennsylvania Ave\",\n  \"notes\": \"My AP's note\",\n  \"lanIp\": \"1.2.3.4\",\n  \"tags\": \" recently-added \",\n  \"networkId\": \"N_24329156\",\n  \"beaconIdParams\": {\n   \"uuid\": \"00000000-0000-0000-0000-000000000000\",\n   \"major\": 5,\n   \"minor\": 3\n  },\n  \"firmware\": \"wireless-25-14\",\n  \"floorPlanId\": \"g_1234567\"\n }\n]"
+				},
+				{
+					"name": "List The Devices In A Network Cisco",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Cisco-Meraki-API-Key",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "https://api.meraki.com/api/v1/networks/:networkId/devices",
+							"protocol": "https",
+							"host": [
+								"api",
+								"meraki",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"networks",
+								":networkId",
+								"devices"
+							],
+							"variable": [
+								{
+									"key": "networkId",
+									"value": "{{networkId}}",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.21.6"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Mar 2022 15:22:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "Fri, 01 Jan 1990 00:00:00 GMT"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "sameorigin"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none"
+						},
+						{
+							"key": "X-UA-Compatible",
+							"value": "IE=Edge,chrome=1"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "79021b3695b8ae3de43bb8a84a1b5b3c"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.657252"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"lat\": 37.4180951010362,\n        \"lng\": -122.098531723022,\n        \"address\": \"\",\n        \"serial\": \"Q2HP-EC87-M9B8\",\n        \"mac\": \"e0:55:3d:d0:04:c5\",\n        \"lanIp\": \"192.168.0.3\",\n        \"url\": \"https://n392.meraki.com/DevNetLab-switch/n/0Yt-Qbig/manage/nodes/new_list/246656713884869\",\n        \"networkId\": \"L_783626335162466320\",\n        \"tags\": [],\n        \"name\": \"ms01-dl1\",\n        \"model\": \"MS220-8P\",\n        \"switchProfileId\": null,\n        \"firmware\": \"switch-14-33\",\n        \"floorPlanId\": null\n    },\n    {\n        \"lat\": 37.4180951010362,\n        \"lng\": -122.098531723022,\n        \"address\": \"\",\n        \"serial\": \"Q2LD-FGN3-VP7S\",\n        \"mac\": \"0c:8d:db:b2:77:f8\",\n        \"lanIp\": \"192.168.128.7\",\n        \"url\": \"https://n392.meraki.com/DevNetLab-wirele/n/61qIJbig/manage/nodes/new_list/13803415828472\",\n        \"networkId\": \"L_783626335162466320\",\n        \"tags\": [],\n        \"name\": \"ap01-dl1\",\n        \"model\": \"MR52\",\n        \"firmware\": \"wireless-27-7-1\",\n        \"floorPlanId\": null\n    },\n    {\n        \"lat\": 37.4180951010362,\n        \"lng\": -122.098531723022,\n        \"address\": \"\",\n        \"serial\": \"Q2QN-Q6EY-NP7J\",\n        \"mac\": \"0c:8d:db:b0:c2:dc\",\n        \"wan1Ip\": \"192.168.128.4\",\n        \"wan2Ip\": null,\n        \"url\": \"https://n392.meraki.com/DevNetLab-applia/n/xaNlkcig/manage/nodes/new_list/13803415716572\",\n        \"networkId\": \"L_783626335162466320\",\n        \"tags\": [],\n        \"name\": \"mx01-dl1\",\n        \"model\": \"MX65\",\n        \"firmware\": \"wired-15-44\",\n        \"floorPlanId\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "List the Clients in a Network",
+			"protocolProfileBehavior": {
+				"followAuthorizationHeader": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": ""
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/networks/:networkId/clients",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"networks",
+						":networkId",
+						"clients"
+					],
+					"query": [
+						{
+							"key": "t0",
+							"value": "{{t0}}",
+							"description": "The beginning of the timespan for the data. The maximum lookback period is 31 days from today.",
+							"disabled": true
+						},
+						{
+							"key": "timespan",
+							"value": "{{timespan}}",
+							"description": "The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.",
+							"disabled": true
+						},
+						{
+							"key": "perPage",
+							"value": "{{perPage}}",
+							"description": "The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10.",
+							"disabled": true
+						},
+						{
+							"key": "startingAfter",
+							"value": "{{startingAfter}}",
+							"description": "A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.",
+							"disabled": true
+						},
+						{
+							"key": "endingBefore",
+							"value": "{{endingBefore}}",
+							"description": "A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "networkId",
+							"value": "{{networkId}}",
+							"description": "(Required) "
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful operation",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/networks/:networkId/clients?t0=<string>&timespan=<float>&perPage=<integer>&startingAfter=<string>&endingBefore=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"networks",
+								":networkId",
+								"clients"
+							],
+							"query": [
+								{
+									"key": "t0",
+									"value": "<string>"
+								},
+								{
+									"key": "timespan",
+									"value": "<float>"
+								},
+								{
+									"key": "perPage",
+									"value": "<integer>"
+								},
+								{
+									"key": "startingAfter",
+									"value": "<string>"
+								},
+								{
+									"key": "endingBefore",
+									"value": "<string>"
+								}
+							],
+							"variable": [
+								{
+									"key": "networkId"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Link",
+							"value": "<string>",
+							"description": "A comma-separated list of first, last, prev, and next relative links used for subsequent paginated requests."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n {\n  \"usage\": {\n   \"sent\": 138,\n   \"recv\": 61\n  },\n  \"id\": \"k74272e\",\n  \"description\": \"Miles's phone\",\n  \"mac\": \"22:33:44:55:66:77\",\n  \"ip\": \"1.2.3.4\",\n  \"user\": \"milesmeraki\",\n  \"vlan\": 255,\n  \"switchport\": null,\n  \"ip6\": \"\",\n  \"firstSeen\": 1518365681,\n  \"lastSeen\": 1526087474,\n  \"manufacturer\": \"Apple\",\n  \"os\": \"iOS\",\n  \"recentDeviceSerial\": \"Q234-ABCD-5678\",\n  \"recentDeviceName\": \"My AP\",\n  \"recentDeviceMac\": \"00:11:22:33:44:55\",\n  \"ssid\": \"My SSID\",\n  \"status\": \"Online\",\n  \"notes\": \"My client note\",\n  \"ip6Local\": \"fe80:0:0:0:1430:aac1:6826:75ab\",\n  \"smInstalled\": true,\n  \"groupPolicy8021x\": \"Student_Access\"\n }\n]"
+				}
+			]
+		},
+		{
+			"name": "List the Devices in an Organization",
+			"protocolProfileBehavior": {
+				"followAuthorizationHeader": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": ""
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/organizations/:organizationId/devices",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"organizations",
+						":organizationId",
+						"devices"
+					],
+					"query": [
+						{
+							"key": "perPage",
+							"value": "{{perPage}}",
+							"description": "The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.",
+							"disabled": true
+						},
+						{
+							"key": "startingAfter",
+							"value": "{{startingAfter}}",
+							"description": "A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.",
+							"disabled": true
+						},
+						{
+							"key": "endingBefore",
+							"value": "{{endingBefore}}",
+							"description": "A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.",
+							"disabled": true
+						},
+						{
+							"key": "configurationUpdatedAfter",
+							"value": "{{configurationUpdatedAfter}}",
+							"description": "Filter results by whether or not the device's configuration has been updated after the given timestamp",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "organizationId",
+							"value": "{{organizationId}}",
+							"description": "(Required) "
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful operation",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/organizations/:organizationId/devices?perPage=<integer>&startingAfter=<string>&endingBefore=<string>&configurationUpdatedAfter=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"organizations",
+								":organizationId",
+								"devices"
+							],
+							"query": [
+								{
+									"key": "perPage",
+									"value": "<integer>"
+								},
+								{
+									"key": "startingAfter",
+									"value": "<string>"
+								},
+								{
+									"key": "endingBefore",
+									"value": "<string>"
+								},
+								{
+									"key": "configurationUpdatedAfter",
+									"value": "<string>"
+								}
+							],
+							"variable": [
+								{
+									"key": "organizationId"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Link",
+							"value": "<string>",
+							"description": "A comma-separated list of first, last, prev, and next relative links used for subsequent paginated requests."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n {\n  \"name\": \"My AP\",\n  \"lat\": 37.4180951010362,\n  \"lng\": -122.098531723022,\n  \"address\": \"1600 Pennsylvania Ave\",\n  \"notes\": \"My AP's note\",\n  \"tags\": \" recently-added \",\n  \"networkId\": \"N_24329156\",\n  \"serial\": \"Q234-ABCD-5678\",\n  \"model\": \"MR34\",\n  \"mac\": \"00:11:22:33:44:55\",\n  \"lanIp\": \"1.2.3.4\",\n  \"firmware\": \"wireless-25-14\"\n }\n]"
+				}
+			]
+		},
+		{
+			"name": "List the Networks in an Organization ",
+			"protocolProfileBehavior": {
+				"followAuthorizationHeader": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": ""
+					}
+				],
+				"url": {
+					"raw": "https://api.meraki.com/api/v1/organizations/:organizationId/networks",
+					"protocol": "https",
+					"host": [
+						"api",
+						"meraki",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"organizations",
+						":organizationId",
+						"networks"
+					],
+					"query": [
+						{
+							"key": "configTemplateId",
+							"value": "{{configTemplateId}}",
+							"description": "An optional parameter that is the ID of a config template. Will return all networks bound to that template.",
+							"disabled": true
+						},
+						{
+							"key": "tags",
+							"value": "{{tags}}",
+							"description": "An optional parameter to filter networks by tags. The filtering is case-sensitive. If tags are included, 'tagsFilterType' should also be included (see below).",
+							"disabled": true
+						},
+						{
+							"key": "tagsFilterType",
+							"value": "{{tagsFilterType}}",
+							"description": "An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return networks which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.",
+							"disabled": true
+						},
+						{
+							"key": "perPage",
+							"value": "{{perPage}}",
+							"description": "The number of entries per page returned. Acceptable range is 3 - 100000. Default is 1000.",
+							"disabled": true
+						},
+						{
+							"key": "startingAfter",
+							"value": "{{startingAfter}}",
+							"description": "A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.",
+							"disabled": true
+						},
+						{
+							"key": "endingBefore",
+							"value": "{{endingBefore}}",
+							"description": "A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "organizationId",
+							"value": "{{organizationId}}",
+							"description": "(Required) "
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful operation",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/organizations/:organizationId/networks?configTemplateId=<string>&tags=<string>,<string>&tagsFilterType=<string>&perPage=<integer>&startingAfter=<string>&endingBefore=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"organizations",
+								":organizationId",
+								"networks"
+							],
+							"query": [
+								{
+									"key": "configTemplateId",
+									"value": "<string>"
+								},
+								{
+									"key": "tags",
+									"value": "<string>,<string>"
+								},
+								{
+									"key": "tagsFilterType",
+									"value": "<string>"
+								},
+								{
+									"key": "perPage",
+									"value": "<integer>"
+								},
+								{
+									"key": "startingAfter",
+									"value": "<string>"
+								},
+								{
+									"key": "endingBefore",
+									"value": "<string>"
+								}
+							],
+							"variable": [
+								{
+									"key": "organizationId"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Link",
+							"value": "<string>",
+							"description": "A comma-separated list of first, last, prev, and next relative links used for subsequent paginated requests."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n {\n  \"id\": \"L_123456\",\n  \"organizationId\": \"2930418\",\n  \"name\": \"Long Island Office\",\n  \"timeZone\": \"America/Los_Angeles\",\n  \"tags\": [\n   \"tag1\",\n   \"tag2\"\n  ],\n  \"productTypes\": [\n   \"appliance\",\n   \"switch\",\n   \"wireless\"\n  ],\n  \"enrollmentString\": \"long-island-office\"\n }\n]"
+				}
+			]
+		},
+		{
+			"name": "List the Organizations",
+			"protocolProfileBehavior": {
+				"followAuthorizationHeader": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": ""
+					}
+				],
+				"url": {
+					"raw": "https://api.meraki.com/api/v1/organizations",
+					"protocol": "https",
+					"host": [
+						"api",
+						"meraki",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"organizations"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful operation",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/organizations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"organizations"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n {\n  \"id\": \"2930418\",\n  \"name\": \"My organization\",\n  \"url\": \"https://dashboard.meraki.com/o/VjjsAd/manage/organization/overview\"\n }\n]"
+				}
+			]
+		}
+	]
+}
